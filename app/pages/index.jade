@@ -1,6 +1,17 @@
-extends /blocks/layout-default/layout-default
+extends /blocks/layout/layout
+
+include /blocks/page/page
+include /blocks/header/header
+include /blocks/logo/logo
+include /blocks/title/title
+include /blocks/stamp/stamp
 
 block head
-	- var pageTitle = 'CSSSR Project Template';
+	- var pageTitle = 'Aidar Ibatullin - CSSSR';
 
 block content
+	+page
+		+header
+			+logo
+			+title
+			+stamp
