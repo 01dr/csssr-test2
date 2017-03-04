@@ -10,6 +10,8 @@ include /blocks/stamp/stamp
 include /blocks/main/main
 include /blocks/main/__section/main__section
 
+include /blocks/input-group/input-group
+
 block head
 	- var pageTitle = 'Aidar Ibatullin - CSSSR';
 
@@ -21,7 +23,11 @@ block content
 			+stamp
 		+main
 			+main__section
-				div форма с инпутами
+				+input-group('Полное ФИО', 'text', 'Ибатуллин Айдар Маратович')
+				+input-group('Год рождения', 'number', '1993')
+				+input-group('Место жительства', 'text', 'Октябрьский / Казань')
+				+input-group('Скайп', 'text', '- это лучший файлообменник')
+				+input-group('Почта', 'email', 'amazing.space.invader@gmail.com')
 			+main__section('Расскажите о себе чекбоксами', 'Отметьте чекбоксами пункты, которые соответствуют вашим скиллам. Кстати, отсутствие опыта не означает, что у вас меньше шансов стать одним из наших товарищей. Это означает, что вы будете получать те задачи, с которыми гарантировано будете справляться.')
 				div массив чекбоксов
 			+main__section('Уровень владения JavaScript')

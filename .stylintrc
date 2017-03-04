@@ -66,6 +66,8 @@
 		"flex-order",
 		"flex-pack",
 		"flex-align",
+		"align-items",
+		"justify-content",
 
 		"box-sizing",
 		"width",
