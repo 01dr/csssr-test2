@@ -1,0 +1,39 @@
+.checkbox-group
+	position relative
+	cursor pointer
+
+	&__checkbox
+		position absolute
+		left -9999px
+
+	&__label
+		position relative
+		padding-left 28px
+		font-family 'PT Sans'
+		font-size 21px
+		font-weight 700
+		user-select none
+		display inline-block
+
+		&:before
+			content ''
+			background url(../images/checkbox.png) no-repeat
+			width 19px
+			height 18px
+			position absolute
+			top 2px
+			left 0
+
+
+		&:after
+			content '✔'
+			width 18px
+			height 18px
+			position absolute
+			left 2px
+			top 2px
+			opacity 0
+			color $primary-font-color
+
+	&__checkbox:checked + &__label:after
+		opacity 1

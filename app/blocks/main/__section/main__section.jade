@@ -3,12 +3,12 @@ include ../__description/main__description
 include ../__content/main__content
 
 mixin main__section(title, description)
-	+e.SECTION.__section
+	+e.SECTION.__section&attributes(attributes)
 		if title
 			+main__title(title)
 
 		if description
 			+main__description(description)
-			
+
 		+main__content
 			block
