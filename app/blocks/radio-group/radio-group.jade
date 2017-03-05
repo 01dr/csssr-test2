@@ -1,0 +1,4 @@
+mixin radio-group(name, label, checked)
+	+b.LABEL.radio-group&attributes(attributes)
+		+e.INPUT.radio(type='radio' name=name checked=checked)
+		+e.SPAN.label=label
