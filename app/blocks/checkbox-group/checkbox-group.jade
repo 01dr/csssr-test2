@@ -1,7 +1,0 @@
-mixin checkbox-group(label, isChecked)
-	+b.LABEL.checkbox-group&attributes(attributes)
-		if label
-			+e.INPUT.checkbox(type='checkbox' checked=isChecked)
-			+e.SPAN.label=label
-		else
-			block
