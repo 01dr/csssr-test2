@@ -17,23 +17,22 @@
 
 		&:before
 			content ''
-			background url(../images/checkbox.png) no-repeat
-			width 19px
-			height 18px
+			sprite $checkbox_body
 			position absolute
 			top 2px
 			left 0
 
-
 		&:after
-			content '✔'
-			width 18px
-			height 18px
+			content ''
+			sprite $checkbox_check
 			position absolute
 			left 2px
 			top 2px
 			opacity 0
 			color $primary-font-color
+			transform scale(2)
+			transition .2s ease all
 
 	&__checkbox:checked + &__label:after
 		opacity 1
+		transform scale(1)
