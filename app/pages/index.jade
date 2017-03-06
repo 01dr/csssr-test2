@@ -16,6 +16,7 @@ include /blocks/expandable-textarea/expandable-textarea
 
 include /blocks/skills/skills
 include /blocks/skills/__list-item/skills__list-item
+include /blocks/target/target
 
 include /blocks/javascript-level/javascript-level
 
@@ -99,16 +100,17 @@ block content
 				+main__content._fourth
 					+expandable-textarea
 
-			+main__section
+			+main__section._fifth
 				+main__title
-					| Какие у вас планы на будущее?
-				+main__description
-					| Этот ответ ни на что не повлияет. Не беда, если в будущем ваши планы поменяются.
-				+main__content
-					+radio-group('target', 'Верстать')
-					+radio-group('target', 'Прокачиваться в JS')
-					+radio-group('target', 'Менеджерство')
-					+radio-group('target', 'Другое', true)
+					| Какие у&thinsp;вас планы на будущее?
+				+main__description._fifth
+					| Этот&thinsp;ответ ни на&thinsp;что не повлияет. Не беда, если в будущем ваши планы поменяются.
+				+main__content._fifth
+					+target
+						+radio-group('target', 'Верстать').target__radio-group
+						+radio-group('target', 'Прокачиваться в JS').target__radio-group_second
+						+radio-group('target', 'Менеджерство').target__radio-group
+						+radio-group('target', 'Другое', true).target__radio-group
 
 			+main__section
 				+main__content

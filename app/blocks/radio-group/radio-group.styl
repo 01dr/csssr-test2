@@ -2,7 +2,6 @@
 	display inline-block
 	position relative
 	cursor pointer
-	margin-right 20px
 
 	&__radio
 		position absolute
@@ -10,9 +9,9 @@
 
 	&__label
 		position relative
-		padding-left 35px
+		padding-left 33px
 		font-family $primary-font-family
-		font-size 21px
+		font-size 20px
 		font-weight 700
 		user-select none
 		display inline-block
@@ -22,13 +21,13 @@
 			sprite $radio_body
 			position absolute
 			top -4px
-			left 0
+			left -1px
 
 		&:after
 			content ''
 			sprite $radio_dot
 			position absolute
-			left 8px
+			left 7px
 			top 4px
 			opacity 0
 			color $primary-font-color
