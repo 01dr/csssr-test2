@@ -16,8 +16,8 @@ export default () => {
 		snap: true,
 		range: {
 			min: 1,
-			'19.8%': 2,
-			'48.9%': 3,
+			'19.4%': 2,
+			'48.7%': 3,
 			max: 4
 		},
 		pips: {
@@ -26,8 +26,14 @@ export default () => {
 		}
 	};
 
-	const customLabels = (slider, labels) => {
+	const customPips = (slider, labels) => {
 		const valNodes = slider.querySelectorAll('.noUi-value-large');
+		const pipNodes = slider.querySelectorAll('.noUi-marker');
+
+		pipNodes[0].className += ' noUi-marker-first';
+		pipNodes[pipNodes.length - 1].className += ' noUi-marker-last';
+		valNodes[0].className += ' noUi-value-first';
+		valNodes[valNodes.length - 1].className += ' noUi-value-last';
 
 		valNodes.forEach((valNode, i) => {
 			const intVal = valNode.innerHTML;
@@ -38,5 +44,5 @@ export default () => {
 
 	noUiSlider.create(slider, config);
 	slider.noUiSlider.set(input.value);
-	customLabels(slider, labels);
+	customPips(slider, labels);
 };

@@ -20,7 +20,7 @@
 			&-handle
 				position relative
 				top -15px
-				left -9px
+				left -8px
 				sprite $slider_triangle
 
 			&-pips
@@ -29,38 +29,44 @@
 				width 100%
 				height 60px
 
-				&:before
-				&:after
-					position absolute
-					top 0
-					width 2px
-					height 24px
-					content ''
-					background-color $primary-font-color
-
-				&:before
-					left 0
-
-				&:after
-					right 0
+				// &:before
+				// &:after
+				// 	position absolute
+				// 	top 0
+				// 	width 2px
+				// 	height 24px
+				// 	content ''
+				// 	background-color $primary-font-color
+				//
+				// &:before
+				// 	left 0
+				//
+				// &:after
+				// 	right 0
 
 			&-marker
 				position absolute
 				top 0
-				margin-left -2px
 				width 2px
 				height 10px
 				background-color $primary-font-color
 
-				&:first-child
-					display none
+				&-first
+				&-last
+					height 24px
 
-			&-value-large
+				&-first
+					margin-left 0
+
+				&-last
+					margin-left -2px
+
+			&-value
 				font-family $primary-font-family
 				position absolute
-				top -32px
-				left 0
-				padding-top 58px
+				top -5px
+				margin-left -4px
+				padding-top 32px
 				max-width 170px
 				font-size 13px
 				font-weight 700
@@ -68,6 +74,10 @@
 				color $primary-font-color
 				line-height 1.5
 
+				&-first
+				&-last
+					margin-left 0
+
 				&:last-child
-					transform translateX(-100%)
+					transform translateX(-95%)
 					width 145px
