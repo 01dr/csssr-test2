@@ -1,2 +1,3 @@
-mixin main__description(description)
-	+e.SMALL.__description= description
+mixin main__description()
+	+e.SMALL.__description&attributes(attributes)
+		block
