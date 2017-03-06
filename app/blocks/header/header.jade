@@ -1,3 +1,11 @@
 mixin header()
-	+b('header').header&attributes(attributes)
-		block
+	+b.HEADER.header&attributes(attributes)
+		//- служебные блоки.
+		+b.logo
+			+e.A.link(href='http://www.csssr.io' target='_blank' title='Сайт CSSSR')
+				+e.IMG.image(src='./assets/images/logo.png' alt='CSSSR' title='Сайт CSSSR')
+
+		+b.title
+			+e.IMG.image(src='./assets/images/case.png' alt='Дело')
+
+		+b.IMG.stamp(src='./assets/images/stamp.png' alt='Секретно. Заполнено собственноручно')

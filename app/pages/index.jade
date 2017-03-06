@@ -3,9 +3,6 @@ extends /blocks/layout/layout
 include /blocks/page/page
 
 include /blocks/header/header
-include /blocks/logo/logo
-include /blocks/title/title
-include /blocks/stamp/stamp
 
 include /blocks/main/main
 include /blocks/main/__section/main__section
@@ -28,9 +25,6 @@ block head
 block content
 	+page
 		+header
-			+logo
-			+title
-			+stamp
 		+main
 			+main__section._first
 				+input-group('Полное ФИО', 'text', 'Ибатуллин Айдар Маратович')
