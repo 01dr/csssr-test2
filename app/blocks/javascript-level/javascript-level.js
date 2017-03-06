@@ -12,8 +12,8 @@ export default () => {
 		snap: true,
 		range: {
 			min: 0,
-			'19%': 19,
-			'49%': 49,
+			'19.8%': 19.8,
+			'48.9%': 48.9,
 			max: 100
 		},
 		pips: {
