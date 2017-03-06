@@ -11,10 +11,20 @@ export default () => {
 		'Пишу сложный JS с нуля'
 	];
 
+	const browserWidth = window.innerWidth || document.body.clientWidth;
+
+	console.log(browserWidth);
+
 	const config = {
 		start: 0,
 		snap: true,
-		range: {
+		orientation: browserWidth < 700 ? 'vertical' : 'horizontal',
+		range: browserWidth < 700 ? {
+			min: 1,
+			'33.3%': 2,
+			'66.6%': 3,
+			max: 4
+		} : {
 			min: 1,
 			'19.4%': 2,
 			'48.7%': 3,

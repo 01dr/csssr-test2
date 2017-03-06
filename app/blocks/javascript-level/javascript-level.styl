@@ -66,3 +66,55 @@
 				&:last-child
 					transform translateX(-95%)
 					width 145px
+
+@media (max-width 700px)
+	.javascript-level
+		margin-top 30px
+		display block
+
+		&__slider
+			padding 0
+
+			.noUi
+				&-base
+					padding-left 22px
+					width 6px
+					height 200px
+					background-image url('../images/line-v.png')
+					background-position 46px 0
+
+				&-handle
+					top -8px
+					left -22px
+					transform rotate(-90deg)
+
+				&-pips
+					position absolute
+					left 18px
+					width 24px
+					height 200px
+
+				&-marker
+					left 0
+					width 10px
+					height 2px
+
+					&-first
+					&-last
+						width 24px
+
+					&-first
+						margin-top 2px
+
+				&-value
+					left 40px
+					margin-top -9px
+					margin-left 0
+					padding 0
+					width 200px
+
+					&-first
+						margin-top -7px
+
+					&:last-child
+						transform none

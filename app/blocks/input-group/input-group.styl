@@ -8,7 +8,6 @@
 		top -3px
 		margin-right 18px
 		display block
-		float left
 		font-family $primary-font-family
 		font-size 22.44px
 		font-weight 700
@@ -18,7 +17,6 @@
 	&__input
 		padding 15px 15px 8px
 		display inline-block
-		float right
 		width 100%
 		font-family $secondary-font-family
 		font-size 29px
@@ -36,3 +34,27 @@
 			top -4px
 			padding 16px 9px 8px
 			width 205px
+
+@media (max-width 700px)
+	.input-group
+		margin 40px 0
+		display block
+
+		&__input
+			padding 8px 15px
+			background-position 0 18px
+
+@media (max-width 500px)
+	.input-group
+		&__input
+			padding 8px 0
+			font-size 18px
+			background-position 0 5px
+
+		&_short
+			margin 0
+
+			.input-group__input
+				padding 15px 0 8px
+				font-size 30px
+				background-position 0 26px
