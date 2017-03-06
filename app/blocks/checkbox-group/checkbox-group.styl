@@ -9,30 +9,30 @@
 	&__label
 		position relative
 		padding-left 28px
+		display inline-block
 		font-family $primary-font-family
 		font-size 21px
 		font-weight 700
-		user-select none
-		display inline-block
 		line-height 1.2
+		user-select none
 
 		&:before
-			content ''
 			sprite $checkbox_body
 			position absolute
 			top 4px
 			left 0
+			content ''
 
 		&:after
-			content ''
 			sprite $checkbox_check
 			position absolute
-			left 2px
 			top 2px
-			opacity 0
+			left 2px
+			content ''
 			color $primary-font-color
-			transform scale(2)
+			opacity 0
 			transition .2s ease all
+			transform scale(2)
 
 	&__checkbox:checked + &__label:after
 		opacity 1

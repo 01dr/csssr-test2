@@ -26,9 +26,9 @@ export default () => {
 		}
 	};
 
-	const customPips = (slider, labels) => {
-		const valNodes = slider.querySelectorAll('.noUi-value-large');
-		const pipNodes = slider.querySelectorAll('.noUi-marker');
+	const customPips = (sliderNode, vals) => {
+		const valNodes = sliderNode.querySelectorAll('.noUi-value-large');
+		const pipNodes = sliderNode.querySelectorAll('.noUi-marker');
 
 		pipNodes[0].className += ' noUi-marker-first';
 		pipNodes[pipNodes.length - 1].className += ' noUi-marker-last';
@@ -37,10 +37,10 @@ export default () => {
 
 		valNodes.forEach((valNode, i) => {
 			const intVal = valNode.innerHTML;
-			valNode.innerHTML = labels[i];
-			valNode.addEventListener('click', () => slider.noUiSlider.set(intVal));
+			valNode.innerHTML = vals[i];
+			valNode.addEventListener('click', () => sliderNode.noUiSlider.set(intVal));
 		});
-	}
+	};
 
 	noUiSlider.create(slider, config);
 	slider.noUiSlider.set(input.value);

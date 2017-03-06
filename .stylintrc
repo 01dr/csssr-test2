@@ -31,6 +31,8 @@
 	"sortOrder": [ // discuss 7
 		"all", // all: initial should be first
 
+		"sprite", // custom prop
+
 		"position",
 		"z-index",
 		"top",
@@ -216,7 +218,7 @@
 	// "trailingWhitespace": "never", // bug: throw error when there are spaces after rule before comment
 	"universal": "never",
 	"valid": true, // discuss 8
-	"mixins": ["size", "margin-x", "margin-y", "padding-x", "padding-y"],
+	"mixins": ["sprite", "size", "margin-x", "margin-y", "padding-x", "padding-y"],
 	"zeroUnits": "never",
 	"zIndexNormalize": false
 }
