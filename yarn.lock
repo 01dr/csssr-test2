@@ -1085,6 +1085,10 @@ bemto.jade@^1.0.0:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/bemto.jade/-/bemto.jade-1.0.3.tgz#dfafc2b1ed6c1d4a3414792274f43bc18655371a"
 
+bemto.pug@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/bemto.pug/-/bemto.pug-2.1.0.tgz#1dbb22f588085b71861258cc4cd696c4b56b53f3"
+
 benchmark@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/benchmark/-/benchmark-1.0.0.tgz#2f1e2fa4c359f11122aa183082218e957e390c73"
