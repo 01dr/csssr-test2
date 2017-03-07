@@ -45,11 +45,22 @@ export default () => {
 		valNodes[0].className += ' noUi-value-first';
 		valNodes[valNodes.length - 1].className += ' noUi-value-last';
 
-		valNodes.forEach((valNode, i) => {
-			const intVal = valNode.innerHTML;
-			valNode.innerHTML = vals[i];
-			valNode.addEventListener('click', () => sliderNode.noUiSlider.set(intVal));
-		});
+		// некробраузеры не поддерживают Array.prototype.forEach
+		// нужен полифилл es5-shim. Проблема всего в одном цикле
+		// поэтому конкретно в этом проекте рациональнее изменить
+		// цикл
+
+		for (let i = 0, len = valNodes.length; i < len; i += 1) {
+			const intVal = valNodes[i].innerHTML;
+			valNodes[i].innerHTML = vals[i];
+			valNodes[i].addEventListener('click', () => sliderNode.noUiSlider.set(intVal));
+		}
+
+		// valNodes.forEach((valNode, i) => {
+		// 	const intVal = valNode.innerHTML;
+		// 	valNode.innerHTML = vals[i];
+		// 	valNode.addEventListener('click', () => sliderNode.noUiSlider.set(intVal));
+		// });
 	};
 
 	noUiSlider.create(slider, config);
